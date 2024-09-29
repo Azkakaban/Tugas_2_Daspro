@@ -1,0 +1,69 @@
+uses crt;
+var 
+   pilihan : char;
+   suhu : real;
+   hasil : real;
+
+begin
+clrscr;
+   writeln('Konversi Suhu');
+   writeln(' ');
+   writeln('Pilih Salah Satu Dari Pilihan Berikut ini : ');
+   writeln(' ');
+   writeln('[1] Celcius ke Fahrenheit ');
+   writeln('[2] Fahrenheit ke Celcius ');
+   writeln('[3] Celcius ke Kelvin ');
+   writeln('[4] Kelvin ke Celcius ');
+   writeln(' ');
+   write('  Nomor Berapa yang Anda Pilih [1-4] : ');
+   readln(pilihan);
+   
+   clrscr;
+   if pilihan = '1' then
+   begin
+   writeln('[1] Celcius ke Fahrenheit');
+   writeln(' ');
+   write('Masukkan Suhu (Dalam Celcius) : ');
+   readln(suhu);
+   hasil := 9 / 5 * suhu + 32;
+   writeln('Celcius    : ',suhu:0:2);
+   writeln('Fahrenheit : ',hasil:0:2);
+   end;
+
+   if pilihan = '2' then
+   begin
+   writeln('[2] Fahrenheit ke Celcius');
+   writeln(' ');
+   write('Masukkan Suhu (Dalam Fahrenheit) : ');
+   readln(suhu);
+   hasil := 5 / 9 * (suhu - 32);
+   writeln('Fahrenheit   : ',suhu:0:2);
+   writeln('Celcius      : ',hasil:0:2);
+   end;
+
+   if pilihan = '3' then
+   begin
+   writeln('[3] Celcius ke Kelvin');
+   writeln(' ');
+   write('Masukkan Suhu (Dalam Celcius) : ');
+   readln(suhu);
+   hasil := suhu + 273.15;
+   writeln('Celcius    : ',suhu:0:2);
+   writeln('Kelvin     : ',hasil:0:2);
+   end;
+
+   if pilihan = '4' then
+   begin
+   writeln('[4] Celcius ke Fahrenheit');
+   writeln(' ');
+   write('Masukkan Suhu (Dalam Kelvin) : ');
+   readln(suhu);
+   hasil := suhu - 273.15;
+   writeln('Kelvin    : ',suhu:0:2);
+   writeln('Celcius   : ',hasil:0:2);
+   end;
+   if (pilihan <> '1') and (pilihan <> '2') and (pilihan <> '3') and (pilihan <> '4') then
+   begin
+   writeln('Pilhan yang Anda Masukkan Tidak Valid');
+   end;
+end.
