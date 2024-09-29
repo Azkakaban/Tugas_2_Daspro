@@ -1,0 +1,30 @@
+uses crt;
+var 
+   nilai : longint;
+   hasil : real;
+
+begin
+clrscr;
+
+write('Masukkan Total Belanjaan : ');
+readln(nilai);
+
+if nilai < 100000 then
+writeln('Total Belanjaan Anda Adalah : ',nilai)
+else if (nilai >= 100000) and (nilai < 500000) then
+begin
+hasil := 0.9 * nilai;
+writeln('Total Belanjaan Anda Adalah : ',hasil:0:0);
+end
+else if (nilai >= 500000) and (nilai < 1000000) then
+begin
+hasil := 0.8 * nilai;
+writeln('Total Belanjaan Anda Adalah : ',hasil:0:0);
+end
+else if (nilai >= 1000000) then
+begin
+hasil := 0.7 * nilai;
+writeln('Total Belanjaan Anda Adalah : ',hasil:0:0);
+end;
+
+end.
