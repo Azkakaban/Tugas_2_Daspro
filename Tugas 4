@@ -1,0 +1,68 @@
+uses crt;
+var 
+   pilihan : char;
+   bil1, bil2, hasil : integer;
+   hasil_bagi : real;
+
+begin
+clrscr;
+
+   writeln('Program Kalkulator Sederhana');
+   writeln(' ');
+   writeln('Pilih Salah Satu Dari Pilihan Berikut Ini : ');
+   writeln(' ');
+   writeln('[1] Penjumlahan');
+   writeln('[2] Pengurangan');
+   writeln('[3] Perkalian');
+   writeln('[4] Pembagian');
+   writeln(' ');
+   write('Operasi Matematika Mana yang Anda Pilh [1-4] : ');
+   readln(pilihan);
+
+  clrscr;
+  case pilihan of
+  '1' : begin
+  writeln('      OPERASI PENJUMLAHAN');
+  writeln(' ');
+  write('Masukkan Bilangan Pertama : '); readln(bil1);
+  write('Masukkan Bilangan Kedua   : '); readln(bil2);
+  hasil := bil1 + bil2;
+  writeln('Hasil Penjumlahan Dua Bilangan Adalah : ',hasil);
+  end;
+
+  '2' : begin
+  writeln('      OPERASI PENGURANGAN');
+  writeln(' ');
+  write('Masukkan Bilangan Pertama : '); readln(bil1);
+  write('Masukkan Bilangan Kedua   : '); readln(bil2);
+  hasil := bil1 - bil2;
+  writeln('Hasil Pengurangan Dua Bilangan Adalah : ',hasil);
+  end;
+
+  '3' : begin
+  writeln('      OPERASI PERKALIAN');
+  writeln(' ');
+  write('Masukkan Bilangan Pertama : '); readln(bil1);
+  write('Masukkan Bilangan Kedua   : '); readln(bil2);
+  hasil := bil1 * bil2;
+  writeln('Hasil Perkalian Dua Bilangan Adalah : ',hasil);
+  end;
+
+  '4' : begin
+  writeln('      OPERASI PEMBAGIAN');
+  writeln(' ');
+  write('Masukkan Bilangan Pertama : '); readln(bil1);
+  write('Masukkan Bilangan Kedua   : '); readln(bil2);
+  if bil2 = 0 then
+  writeln('Hasil Pembagian Dua Bilangan Tidak Terdefinisi')
+  else
+  begin
+  hasil_bagi := bil1 / bil2;
+  writeln('Hasil Pembagian Dua Bilangan Adalah : ',hasil_bagi:0:2);
+  end;
+  end
+  else
+  writeln('Pilihan yang Anda Masukkan Tidak Valid');
+  end;
+
+end.
